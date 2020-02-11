@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.AppInfoMapper">
+
+    <select id="getAllAPPInfo" resultType="com.example.demo.object.AppInfo">
+        select APPXXID as appXXId, NODEXXID as nodeXXId, APPXX_ENG_NAME as appXXEngName, APPXX_CHN_NAME as appXXChnName, APPXX_STATUS as appXXStatus from XX.XX
+    </select>
+
+    <insert id="addAPPInfo" useGeneratedKeys="false" parameterType="com.example.demo.object.AppInfo">
+        insert into XX.XX(APPXXID, NODEXXID, APPXX_ENG_NAME, APPXX_CHN_NAME) values(#{appXXId}, #{nodeXXId}, #{appXXEngName}, #{appXXChnName})
+    </insert>
+
+    <update id="updateAPPInfo" parameterType="com.example.demo.object.AppInfo">
+        update XX.XX set NODEXXID=#{nodeXXId}, APPXX_ENG_NAME=#{appXXEngName}, APPXX_CHN_NAME=#{appXXChnName} where APPXXID=#{appXXId}
+    </update>
+
+    <delete id="deleteAPPInfo" parameterType="com.example.demo.object.AppInfo">
+        delete from XX.XX where APPXXID=#{appXXId}
+    </delete>
+    
+</mapper>
+
