@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input id="username" type="text">
+<input id="password" type="password">
+<input onclick="login()" value="登录" type="button">
+
+</body>
+
+<script src="jquery-1.4.4.min.js"></script>
+<script>
+    function login() {
+
+        $.ajax({
+            url: "/login",
+            type: "post",
+            data: {
+                username: $('#username').val(),
+                password: $('#password').val()
+            },
+            success: function(data){
+
+                let post = {data: data};
+                window.opener.postMessage(post, "*");
+                window.close();
+            }
+        })
+    }
+</script>
+
+</html>

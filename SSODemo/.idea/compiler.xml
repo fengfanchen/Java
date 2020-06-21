@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="IPHashServer2" />
+        <module name="IPHashServer1" />
+        <module name="LoginDemo" />
+        <module name="QQServer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="IPHashServer1" target="1.8" />
+      <module name="IPHashServer2" target="1.8" />
+      <module name="LoginDemo" target="1.8" />
+      <module name="QQServer" target="1.8" />
+      <module name="SSODemo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

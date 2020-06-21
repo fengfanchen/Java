@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="userInfo"></h1>
+</body>
+
+<script src="jquery-1.4.4.min.js"></script>
+<script>
+
+    $(function (){
+
+        $.ajax({
+            url: "/getUser",
+            type: "get",
+            dataType: "json",
+            success: function(data){
+
+                console.log(data.data);
+                let pare = data.data;
+                $("#userInfo").text("欢迎你:" + pare.username);
+            }
+        })
+    });
+</script>
+
+</html>

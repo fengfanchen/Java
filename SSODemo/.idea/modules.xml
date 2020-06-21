@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/IPHashServer1/IPHashServer1.iml" filepath="$PROJECT_DIR$/IPHashServer1/IPHashServer1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IPHashServer2/IPHashServer2.iml" filepath="$PROJECT_DIR$/IPHashServer2/IPHashServer2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LoginDemo/LoginDemo.iml" filepath="$PROJECT_DIR$/LoginDemo/LoginDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QQServer/QQServer.iml" filepath="$PROJECT_DIR$/QQServer/QQServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSODemo.iml" filepath="$PROJECT_DIR$/SSODemo.iml" />
+    </modules>
+  </component>
+</project>

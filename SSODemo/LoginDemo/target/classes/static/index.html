@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xxxAPP</title>
+</head>
+<body>
+
+<input id="username" type="text">
+<input id="password" type="password">
+<input value="登录" type="button">
+<input onclick="openWin()" value="使用QQ登录" type="button">
+
+</body>
+
+<script src="jquery-1.4.4.min.js"></script>
+<script language="JavaScript">
+
+    function openWin(){
+
+        window.open("http://127.0.0.1:8081/index.html", window, "height=453,width=750,top=0,left=0");
+    }
+
+    function onMessage(e){
+
+        console.log(e.data.data);
+        $.ajax({
+           url: "/loginByQQ",
+           data: {token: e.data.data},
+           type: "post",
+            dataType: "json",
+            success: function(data){
+
+               console.log(data.code);
+               if(data.code == 200){
+
+                   window.location.href = "home.html";
+               }
+            }
+        });
+    }
+
+    window.addEventListener('message', onMessage)
+
+</script>
+
+</html>
