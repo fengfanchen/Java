@@ -12,7 +12,7 @@ public class Main {
 
         MobileCodeWS mobileCodeWS = new MobileCodeWS();
         MobileCodeWSSoap mobileCodeWSSoap = mobileCodeWS.getMobileCodeWSSoap();
-        String mobileCodeInfo = mobileCodeWSSoap.getMobileCodeInfo("13151051652", null);
+        String mobileCodeInfo = mobileCodeWSSoap.getMobileCodeInfo("13151111111", null);
         System.out.println(mobileCodeInfo);
 
         System.out.println("----------------- 华丽的分割线 -----------------");
