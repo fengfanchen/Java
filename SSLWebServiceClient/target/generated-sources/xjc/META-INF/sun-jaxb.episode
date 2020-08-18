@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+  <!--
+
+此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.0 生成的
+请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+在重新编译源模式时, 对此文件的所有修改都将丢失。
+生成时间: 2020.08.14 时间 12:45:41 PM GMT+08:00 
+
+  -->
+  <bindings xmlns:tns="http://spring.io/guides/gs-producing-web-service" if-exists="true" scd="x-schema::tns">
+    <schemaBindings map="false">
+      <package name="com.example.consumingwebservice.wsdl"/>
+    </schemaBindings>
+    <bindings if-exists="true" scd="tns:getCountryRequest">
+      <class ref="com.example.consumingwebservice.wsdl.GetCountryRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getCountryResponse">
+      <class ref="com.example.consumingwebservice.wsdl.GetCountryResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:country">
+      <class ref="com.example.consumingwebservice.wsdl.Country"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:currency">
+      <typesafeEnumClass ref="com.example.consumingwebservice.wsdl.Currency"/>
+    </bindings>
+  </bindings>
+</bindings>
