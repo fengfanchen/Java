@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.example.demo.DemoApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.153 s <<< FAILURE! - in com.example.demo.DemoApplicationTests
+initializationError(com.example.demo.DemoApplicationTests)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.Exception: The class com.example.demo.DemoApplicationTests is not public.
+
+initializationError(com.example.demo.DemoApplicationTests)  Time elapsed: 0 s  <<< ERROR!
+java.lang.Exception: Test class should have exactly one public constructor
+
+initializationError(com.example.demo.DemoApplicationTests)  Time elapsed: 0 s  <<< ERROR!
+java.lang.Exception: Method contextLoads() should be public
+
