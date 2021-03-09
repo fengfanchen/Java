@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+
+        let ws = null;
+
+        window.onload=function(){
+
+            WebSocketTest();
+        }
+
+        function WebSocketTest()
+        {
+            if ("WebSocket" in window)
+            {
+                alert("浏览器支持 WebSocket!");
+
+                // 打开一个 web socket
+                ws = new WebSocket("ws://127.0.0.1:8080/websocket");
+                ws.onmessage = function (evt)
+                {
+                    let received_msg = evt.data;
+                    alert("接收推送数据：" + received_msg);
+                };
+
+                ws.onclose = function()
+                {
+                    // 关闭 websocket
+                    alert("连接已关闭...");
+                };
+            }
+
+            else
+            {
+                // 浏览器不支持 WebSocket
+                alert("浏览器不支持 WebSocket!");
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+
+<h1>推送页面</h1>
+
+</body>
+</html>
