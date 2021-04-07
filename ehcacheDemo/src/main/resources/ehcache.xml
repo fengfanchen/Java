@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
+
+    <!-- default cache configurations if no cache configuration is defined -->
+    <defaultCache eternal="true" maxElementsInMemory="100"
+                  overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
+
+    <!-- define our own cache configuration -->
+    <cache name="employee" maxElementsInMemory="10000"
+           eternal="false" overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />
+</ehcache>
