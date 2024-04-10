@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    dynamic:
+      primary: mysql
+      datasource:
+        mysql:
+          url: jdbc:mysql://127.0.0.1:3306/XXX?characterEncoding=utf-8&useSSL=false
+          username: root
+          password: root
+          driver-class-name: com.mysql.jdbc.Driver
+        dm7:
+          url: jdbc:dm://127.0.0.1/XXX?characterEncoding=utf-8&useSSL=false
+          username: SYSDBA
+          password: SYSDBA
+          driver-class-name: dm.jdbc.driver.DmDriver
